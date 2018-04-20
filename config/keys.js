@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: process.env.MONGO_URI || 'mongodb://localhost/login-dev',
-  secretOrKey: process.env.SECRET_OR_KEY || 'shashank'
-};
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys_prod');
+} else {
+  module.exports = require('./keys_dev');
+}
