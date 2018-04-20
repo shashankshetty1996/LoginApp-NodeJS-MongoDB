@@ -1,0 +1,30 @@
+<div class="navbar-fixed">
+  <nav class="purple darken-2">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">LoginApp</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        {{#if user}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+  {{#if user}}
+  <li><a href="/">Home</a></li>
+  <li><a href="/logout">Logout</a></li>  
+  {{else}}
+  <li><a href="/login">Login</a></li>
+  <li><a href="/register">Register</a></li>
+  {{/if}}
+</ul>
+
+<!-- Side Navigation Bar initializer -->
+<script src="/js/sidenav.js"></script>

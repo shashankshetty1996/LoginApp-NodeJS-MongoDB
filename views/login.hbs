@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row card-panel">
+    <h2 class="card-title purple-text darken-2 center-align">Login Here</h2>
+    <form action="/login" method="POST">
+      <div class="col s12 input-field">
+        <input type="text" class="validate" id="username" name="username" required>
+        <label for="username">Enter your username</label>
+        <span class="helper-text" data-error="Invalid username"></span>
+      </div>
+      <div class="col s12 input-field">
+        <input type="password" class="validate" id="password" name="password" required>
+        <label for="password">Enter your password</label>
+        <span class="helper-text" data-error="Invalid field"></span>
+      </div>
+      <button type="submit" class="col l6 offset-l3 m6 offset-m3 s12 btn waves-effect waves-light">Submit</button>
+    </form>
+  </div>
+</div>

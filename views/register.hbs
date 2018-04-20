@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row card-panel">
+    <h2 class="card-title purple-text darken-2 center-align">Register Here</h2>
+    <form action="/register" method="POST">
+      <div class="col l6 m12 s12 input-field">
+        <input type="text" class="validate" id="name" name="name" value="{{ name }}" required>
+        <label for="name">Enter your Name here</label>
+        <span class="helper-text" data-error="Invalid Field"></span>
+      </div>
+      <div class="col l6 m12 s12 input-field">
+        <input type="text" class="validate" id="username" name="username" value="{{ username }}" required>
+        <label for="username">Check for username</label>
+        <span class="helper-text" data-error="Invalid username"></span>
+      </div>
+      <div class="col l6 m12 s12 input-field">
+        <input type="password" class="validate" id="password" name="password" value="{{ password }}" required>
+        <label for="password">Enter your password</label>
+        <span class="helper-text" data-error="Invalid field"></span>
+      </div>
+      <div class="col l6 m12 s12 input-field">
+        <input type="password" class="validate" id="cpassword" name="cpassword" value="{{ cpassword }}" required>
+        <label for="cpassword">Confirm your password</label>
+        <span class="helper-text" data-error="Invalid field"></span>
+      </div>
+      <div class="col l6 m12 s12 input-field">
+        <input type="text" class="validate" id="phone" name="phone" value="{{ phone }}" required>
+        <label for="phone">Enter your Contact Number here</label>
+        <span class="helper-text" data-error="Invalid Field"></span>
+      </div>
+      <div class="col l6 m12 s12 input-field">
+        <input type="email" class="validate" id="email" name="email" value="{{ email }}" required>
+        <label for="email">Enter your E-Mail ID Here</label>
+        <span class="helper-text" data-error="Invalid Field"></span>
+      </div>
+      <div class="right-align">
+        <a href="/login">I already have an account</a>
+      </div>
+      <div class="col s12 input-field">
+        <button type="submit" class="col l6 offset-l3 m6 offset-m3 s12 btn waves-effect waves-light">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
