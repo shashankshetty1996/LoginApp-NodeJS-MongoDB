@@ -29,7 +29,9 @@ router.post('/login', (req, res, next) => {
     failureRedirect: '/login',
     failureFlash: true
   })(req, res, next);
-  req.flash('success_msg', 'Logged in successfully');
+  if(req.isAuthenticated()) {
+    req.flash('success_msg', 'Logged in successfully'); 
+  }   
 });
 
 // logout route
@@ -51,7 +53,7 @@ router.post('/register', (req, res) => {
     errors.push({text: `password is not matching`});
   }
 
-  if(req.body.passport.length < 10) {
+  if(req.body.password.length < 4) {
     errors.push({text: `Password should be minimum of four character`});
   }
 
